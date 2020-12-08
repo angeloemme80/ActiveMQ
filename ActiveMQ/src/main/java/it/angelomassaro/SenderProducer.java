@@ -51,7 +51,7 @@ public class SenderProducer {
 				message.setText(testoDelMessaggio + " numero: " + i);
 				messageProducer.send(message);
 			}
-			System.out.println("FINE!");
+			System.out.println("FINE!!!");
 			
 		} catch (JMSException e) {
 			e.printStackTrace();
