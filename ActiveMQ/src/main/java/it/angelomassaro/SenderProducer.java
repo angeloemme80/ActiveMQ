@@ -16,7 +16,8 @@ public class SenderProducer {
 	private ConnectionFactory connectionFactory = null;
 	private String username = "admin";
 	private String password = "admin";
-	private String brokerUrl = "tcp://192.168.1.98:61616";
+	//private String brokerUrl = "tcp://192.168.1.98:61616";
+	private String brokerUrl = "tcp://localhost:61616";
 	private String queueName = "HelloWorldQ";
 	private Connection connection = null;
 	private Session session = null;
@@ -26,11 +27,11 @@ public class SenderProducer {
 	
 	public static void main(String[] args) {
 		SenderProducer senderProducer = new SenderProducer();
-		boolean inviato = senderProducer.sendMessage(" - Ecco il mio messaggio verso la coda!!!");
+		//boolean inviato = senderProducer.sendMessage(" - Ecco il mio messaggio verso la coda!!!");
 		//System.out.println(inviato);
 		
-		//String messaggio = senderProducer.readMessage();
-		//System.out.println(messaggio);
+		String messaggio = senderProducer.readMessage();
+		System.out.println(messaggio);
 	}
 	
 	
